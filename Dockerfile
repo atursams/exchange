@@ -23,8 +23,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
-COPY . /source/OpenSfM
+COPY . /mainsite
 
-WORKDIR /source/OpenSfM
+WORKDIR /mainsite
 
 RUN pip3 install -r requirements.txt
