@@ -1,0 +1,1 @@
+supported_currencies = ('USD', 'EUR', 'ILS')
