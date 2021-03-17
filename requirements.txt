@@ -1,6 +1,0 @@
-Django==3.1.7
-pandas
-tabulate
-aiohttp
-redis
-tabulate
