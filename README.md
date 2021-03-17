@@ -13,15 +13,4 @@ cd mainsite
 python manage.py runserver  
   
 You can choose a port number like this:  
-python manage.py runserver  
-
-## Run django with asynchronous support
-
-### requirements
-sudo apt install gunicorn  
-sudo apt-get install uvicorn  
-pip install uvloop  
-
-### Run  
-cd mainsite 
-gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker
+python manage.py runserver 3000
