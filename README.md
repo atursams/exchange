@@ -17,9 +17,10 @@ python manage.py runserver
 
 ## Run django with asynchronous support
 
-### General requirements
+### requirements
 sudo apt install gunicorn  
 sudo apt-get install uvicorn  
 
 ### Run  
+cd mainsite 
 gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker
