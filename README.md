@@ -20,6 +20,7 @@ python manage.py runserver
 ### requirements
 sudo apt install gunicorn  
 sudo apt-get install uvicorn  
+pip install uvloop  
 
 ### Run  
 cd mainsite 
