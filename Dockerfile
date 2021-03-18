@@ -8,6 +8,8 @@ WORKDIR /app
 # Add current directory code to working directory
 ADD . /app/
 
+pip -install -r requirements.txt
+
 # set default environment variables
 ENV PYTHONUNBUFFERED 1
 ENV LANG C.UTF-8
