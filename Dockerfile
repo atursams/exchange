@@ -39,4 +39,4 @@ RUN pip3 install pipenv
 RUN pipenv install --skip-lock --system --dev
 
 EXPOSE 8888
-gunicorn mainsite.asgi:application --bind 0.0.0.0:3000 -k uvicorn.workers.UvicornWorker
+RUN gunicorn mainsite.asgi:application --bind 0.0.0.0:3000 -k uvicorn.workers.UvicornWorker
