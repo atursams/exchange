@@ -13,10 +13,6 @@ ENV PYTHONUNBUFFERED 1
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive 
 
-# set project environment variables
-# grab these via Python's os.environ
-# these are 100% optional here
-ENV PORT=3000
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -39,5 +35,5 @@ RUN pip3 install pipenv
 RUN pipenv install --skip-lock --system --dev
 RUN pip install -r requirements.txt
 
-EXPOSE 3000
+EXPOSE 8888
 RUN gunicorn mainsite.asgi:application --bind 0.0.0.0:3000 -k uvicorn.workers.UvicornWorker
