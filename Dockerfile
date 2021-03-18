@@ -37,7 +37,7 @@ RUN pip3 install pipenv
 
 # Install project dependencies
 RUN pipenv install --skip-lock --system --dev
-RUN pip -install -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8888
 RUN gunicorn mainsite.asgi:application --bind 0.0.0.0:3000 -k uvicorn.workers.UvicornWorker
