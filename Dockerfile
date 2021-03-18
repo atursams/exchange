@@ -8,8 +8,6 @@ WORKDIR /app
 # Add current directory code to working directory
 ADD . /app/
 
-pip -install -r requirements.txt
-
 # set default environment variables
 ENV PYTHONUNBUFFERED 1
 ENV LANG C.UTF-8
@@ -39,6 +37,7 @@ RUN pip3 install pipenv
 
 # Install project dependencies
 RUN pipenv install --skip-lock --system --dev
+RUN pip -install -r requirements.txt
 
 EXPOSE 8888
 RUN gunicorn mainsite.asgi:application --bind 0.0.0.0:3000 -k uvicorn.workers.UvicornWorker
